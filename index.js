@@ -1,5 +1,9 @@
 updateHTMLContent('Titanic')
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> aabf0960b7c6e9c8c4d1cdd54eb05af6dbdb008e
 function updateHTMLContent(movieName) {
   let currentMovie = movies[movieName]
   let title = document.getElementById('title')
@@ -22,6 +26,7 @@ function updateHTMLContent(movieName) {
   let castInnerHTML = ""
   let reviewInnerHTML = ""
   
+<<<<<<< HEAD
   for (let castMember of currentMovie.cast) {
     let role = castMember.role
     let actor = castMember.actor
@@ -36,6 +41,22 @@ function updateHTMLContent(movieName) {
     reviewInnerHTML += ("<p>" + username + ": " + content + "</p>")
   }
   reviewInnerHTML += ""
+=======
+  for (castMember of currentMovie.cast) {
+    let role = castMember.role
+    let actor = castMember.actor
+    castInnerHTML += (role + ": " + actor)  
+  }
+  // castInnerHTML +=""
+  cast.innerHTML = castInnerHTML
+  
+  for (review of currentMovie.reviews) {
+    let username = review.username
+    let content = review.content
+    reviewInnerHTML += (username + ": " + content)
+  }
+  // reviewInnerHTML += ""
+>>>>>>> aabf0960b7c6e9c8c4d1cdd54eb05af6dbdb008e
   reviews.innerHTML = reviewInnerHTML
 
   const titanicButton = document.getElementById('Titanic')
